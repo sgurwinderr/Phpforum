@@ -14,8 +14,8 @@ ob_end_clean();
 </head>
 <body>
 <?php
-mysql_connect('localhost','username','password');
-mysql_select_db('db');
+mysql_connect('localhost','root','root');
+mysql_select_db('sampledb');
 $output1 = mysql_fetch_assoc(mysql_query("SELECT name FROM main WHERE id = $id"));
 echo $output1['name'];
 ?>

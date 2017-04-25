@@ -15,8 +15,8 @@ ob_end_clean();
 <body>
 <table border="1" cellpadding="4" width="100%">
 <?php
-mysql_connect('localhost','username','password');
-mysql_select_db('db');
+mysql_connect('localhost','root','root');
+mysql_select_db('sampledb');
 $query1 = mysql_query("SELECT * FROM replies WHERE topicid = $id ORDER BY id ASC");
 $query2 = mysql_num_rows($query1);
 $output2 = mysql_fetch_assoc(mysql_query("SELECT * FROM topics WHERE id = $id"));

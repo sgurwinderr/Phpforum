@@ -25,8 +25,8 @@ function clear($message)
 }
 if ($_POST['submit'])
 {
-	mysql_connect('localhost','username','password');
-	mysql_select_db('db');
+	mysql_connect('localhost','root','root');
+	mysql_select_db('sampledb');
 	$message = clear($_POST['message']);
 	$subject = clear($_POST['subject']);
 	$poster = clear($_POST['poster']);
