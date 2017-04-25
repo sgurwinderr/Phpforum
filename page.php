@@ -11,7 +11,7 @@ function clear($message)
 }
 if(!$_SESSION['login'])
 {
-	header('Location: signup.php');
+	header('Location: adduser.php');
 	exit;
 }
 else
