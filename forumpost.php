@@ -2,11 +2,7 @@
 ob_start();
 $id = (int) $_GET['id'];
 $type = $_GET['type'];
-if ($id < 1 || ($type != 'replies' && $type != 'topics'))
-{
-	header('Location: forum.php');
-	exit();
-}
+#if ($id < 1 || ($type != 'replies' && $type != 'topics')){header('Location: forum.php');exit();}
 ob_end_clean();
 ?>
 <html>
