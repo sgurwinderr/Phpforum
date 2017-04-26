@@ -47,7 +47,7 @@
 			}
 			echo "</table>";
 		} else {
-			echo "<p>this category has no topics yet!  <a href='/newtopic/".$cid."/".$scid."'>
+			echo "<p>this category has no topics yet!  <a href='/newtopic.php?=cid".$cid."&scid".$scid."'>
 				 add the very first topic like a boss!</a></p>";
 		}
 	}
@@ -69,11 +69,11 @@
 	}
 	
 	function replylink($cid, $scid, $tid) {
-		echo "<p><a href='/replyto/".$cid."/".$scid."/".$tid."'>Reply to this post</a></p>";
+		echo "<p><a href='/replyto.php?cid=".$cid."&scid".$scid."&tid".$tid."'>Reply to this post</a></p>";
 	}
 	
 	function replytopost($cid, $scid, $tid) {
-		echo "<div class='content'><form action='/addreply/".$cid."/".$scid."/".$tid."' method='POST'>
+		echo "<div class='content'><form action='/addreply.php?cid=".$cid."&scid=".$scid."&tid".$tid."' method='POST'>
 			  <p>Comment: </p>
 			  <textarea cols='80' rows='5' id='comment' name='comment'></textarea><br />
 			  <input type='submit' value='add comment' />
