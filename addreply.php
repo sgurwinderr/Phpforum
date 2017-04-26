@@ -3,7 +3,7 @@
 	
 	include ('dbconn.php');
 	
-	$comment = nl2br(addslashes($_POST['comment']));
+	$comment =addslashes($_POST['comment']);
 	$cid = $_GET['cid'];
 	$scid = $_GET['scid'];
 	$tid = $_GET['tid'];
