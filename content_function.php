@@ -18,7 +18,7 @@
 									  WHERE ($parent_id = categories.cat_id) AND ($parent_id = subcategories.parent_id)");
 		echo "<tr><th width='90%'>Categories</th><th width='10%'>Topics</th></tr>";
 		while ($row = mysqli_fetch_assoc($select)) {
-			echo "<tr><td class='category_title'><a href='/forum-tutorial/topics/".$row['cat_id']."/".$row['subcat_id']."'>
+			echo "<tr><td class='category_title'><a href='/topics/".$row['cat_id']."/".$row['subcat_id']."'>
 				  ".$row['subcategory_title']."<br />";
 			echo $row['subcategory_desc']."</a></td>";
 			echo "<td class='num-topics'>".getnumtopics($parent_id, $row['subcat_id'])."</td></tr>";
@@ -47,7 +47,7 @@
 			}
 			echo "</table>";
 		} else {
-			echo "<p>this category has no topics yet!  <a href='/forum-tutorial/newtopic/".$cid."/".$scid."'>
+			echo "<p>this category has no topics yet!  <a href='/newtopic/".$cid."/".$scid."'>
 				 add the very first topic like a boss!</a></p>";
 		}
 	}
@@ -69,11 +69,11 @@
 	}
 	
 	function replylink($cid, $scid, $tid) {
-		echo "<p><a href='/forum-tutorial/replyto/".$cid."/".$scid."/".$tid."'>Reply to this post</a></p>";
+		echo "<p><a href='/replyto/".$cid."/".$scid."/".$tid."'>Reply to this post</a></p>";
 	}
 	
 	function replytopost($cid, $scid, $tid) {
-		echo "<div class='content'><form action='/forum-tutorial/addreply/".$cid."/".$scid."/".$tid."' method='POST'>
+		echo "<div class='content'><form action='/addreply/".$cid."/".$scid."/".$tid."' method='POST'>
 			  <p>Comment: </p>
 			  <textarea cols='80' rows='5' id='comment' name='comment'></textarea><br />
 			  <input type='submit' value='add comment' />
