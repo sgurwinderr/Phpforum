@@ -3,11 +3,11 @@
 	include ('content_function.php');
 ?>
 <html>
-<head><title>Inki's PHP Forum Tutorial</title></head>
+<head><title>Ace Forum</title></head>
 <link href="/styles/main.css" type="text/css" rel="stylesheet" />
 <body>
 	<div class="pane">
-		<div class="header"><h1><a href="/">PHP and MySQL Forum Tutorial</a></h1></div>
+		<div class="header"><h1><a href="/">Ace Forum</a></h1></div>
 		<div class="loginpane">
 			<?php
 				session_start();
@@ -26,7 +26,7 @@
 			?>
 		</div>
 		<div class="forumdesc">
-			<p>Welcome to the world's coolest forum made with PHP and MySQL... for noobs just like you!</p>
+			<p>Welcome to the Discussion forum</p>
 		</div>
 		<div class="content">
 			<?php 
