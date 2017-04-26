@@ -12,6 +12,6 @@
 								  VALUES ('".$cid."', '".$scid."', '".$tid."', '".$_SESSION['username']."', '".$comment."', NOW());");
 								  
 	if ($insert) {
-		header("Location: /readtopic/".$cid."/".$scid."/".$tid."");
+		header("Location: /readtopic.php?cid=".$cid."&scid=".$scid."&tid=".$tid."");
 	}
 ?>

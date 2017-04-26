@@ -29,7 +29,7 @@
 		<div class="forumdesc">
 			<?php
 				if (!isset($_SESSION['username'])) {
-					echo "<p>please login first or <a href='/forum-tutorial/register'>click here</a> to register.</p>";
+					echo "<p>please login first or <a href='/register'>click here</a> to register.</p>";
 				}
 			?>
 		</div>

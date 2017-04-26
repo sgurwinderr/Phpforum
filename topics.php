@@ -29,7 +29,7 @@
 		</div>
 		<?php
 			if (isset($_SESSION['username'])) {
-				echo "<div class='content'><p><a href='/newtopic/".$_GET['cid']."/".$_GET['scid']."'>
+				echo "<div class='content'><p><a href='/newtopic.php?cid=".$_GET['cid']."&scid=".$_GET['scid']."'>
 					  add new topic</a></p></div>";
 			}
 		?>
