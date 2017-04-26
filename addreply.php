@@ -3,7 +3,7 @@
 	
 	include ('dbconn.php');
 	
-	$comment =$_POST['comment'];
+	$comment =$_GET['comment'];
 	$cid = $_GET['cid'];
 	$scid = $_GET['scid'];
 	$tid = $_GET['tid'];
