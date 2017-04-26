@@ -70,7 +70,7 @@
 	}
 	
 	function replytopost($cid, $scid, $tid) {
-		echo "<div class='content'><form action='/addreply.php?cid=".$cid."&scid=".$scid."&tid=".$tid."' method='POST'>
+		echo "<div class='content'><form action='/addreply.php?cid=".$cid."&scid=".$scid."&tid=".$tid."' method='GET'>
 			  <p>Comment: </p>
 			  <textarea cols='80' rows='5' id='comment' name='comment'></textarea><br />
 			  <input type='submit' value='add comment' />
