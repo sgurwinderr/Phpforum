@@ -45,8 +45,7 @@
 					 <td>".$row['replies']."</td></tr>";
 			}
 			echo "</table>";
-			echo "<p>this category has no topics yet!  <a href='/newtopic.php?=cid".$cid."&scid".$scid."'>
-				 add the very first topic like a boss!</a></p>";
+			echo "<br><p> Want To Add Topics <a href='/newtopic.php?=cid".$cid."&scid".$scid."'></a></p>";
 	}
 	
 	function disptopic($cid, $scid, $tid) {
@@ -70,7 +69,7 @@
 	}
 	
 	function replytopost($cid, $scid, $tid) {
-		echo "<div class='content'><form action='/addreply.php?cid=".$cid."&scid=".$scid."&tid=".$tid."' method='GET'>
+		echo "<div class='content'><form action='/addreply.php?cid=".$cid."&scid=".$scid."&tid=".$tid."' method='POST'>
 			  <p>Comment: </p>
 			  <textarea cols='80' rows='5' id='comment' name='comment'></textarea><br />
 			  <input type='submit' value='add comment' />
