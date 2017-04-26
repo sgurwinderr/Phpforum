@@ -45,7 +45,7 @@
 					 <td>".$row['replies']."</td></tr>";
 			}
 			echo "</table>";
-			echo "<br><p> Want To Add Topics <a href='/newtopic.php?=cid".$cid."&scid".$scid."'></a></p>";
+			echo "<br><p> Want To Add Topics <a href='/newtopic.php?=cid".$cid."&scid".$scid."'> Add Topics </a></p>";
 	}
 	
 	function disptopic($cid, $scid, $tid) {
