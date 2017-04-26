@@ -4,10 +4,10 @@
 ?>
 <html>
 <head><title>Inki's PHP Forum Tutorial</title></head>
-<link href="/forum-tutorial/styles/main.css" type="text/css" rel="stylesheet" />
+<link href="/styles/main.css" type="text/css" rel="stylesheet" />
 <body>
 	<div class="pane">
-		<div class="header"><h1><a href="/forum-tutorial">PHP and MySQL Forum Tutorial</a></h1></div>
+		<div class="header"><h1><a href="/">PHP and MySQL Forum Tutorial</a></h1></div>
 		<div class="loginpane">
 			<?php
 				session_start();
@@ -30,7 +30,7 @@
 		</div>
 		<?php
 			if (isset($_SESSION['username'])) {
-				echo "<div class='content'><p><a href='/forum-tutorial/newtopic/".$_GET['cid']."/".$_GET['scid']."'>
+				echo "<div class='content'><p><a href='/newtopic/".$_GET['cid']."/".$_GET['scid']."'>
 					  add new topic</a></p></div>";
 			}
 		?>

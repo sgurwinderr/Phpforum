@@ -4,10 +4,10 @@
 ?>
 <html>
 <head><title>Inki's PHP Forum Tutorial</title></head>
-<link href="/forum-tutorial/styles/main.css" type="text/css" rel="stylesheet" />
+<link href="/styles/main.css" type="text/css" rel="stylesheet" />
 <body>
 	<div class="pane">
-		<div class="header"><h1><a href="/forum-tutorial">PHP and MySQL Forum Tutorial</a></h1></div>
+		<div class="header"><h1><a href="/">PHP and MySQL Forum Tutorial</a></h1></div>
 		<div class="loginpane">
 			<?php
 				session_start();
@@ -31,7 +31,7 @@
 		<div class="content">
 			<?php 
 				if (isset($_SESSION['username'])) {
-					echo "<form action='/forum-tutorial/addnewtopic.php?cid=".$_GET['cid']."&scid=".$_GET['scid']."'
+					echo "<form action='/addnewtopic.php?cid=".$_GET['cid']."&scid=".$_GET['scid']."'
 						  method='POST'>
 						  <p>Title: </p>
 						  <input type='text' id='topic' name='topic' size='100' />
@@ -39,7 +39,7 @@
 						  <textarea id='content' name='content'></textarea><br />
 						  <input type='submit' value='add new post' /></form>";
 				} else {
-					echo "<p>please login first or <a href='/forum-tutorial/register.html'>click here</a> to register.</p>";
+					echo "<p>please login first or <a href='/register.html'>click here</a> to register.</p>";
 				}
 			?>
 		</div>

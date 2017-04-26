@@ -12,6 +12,6 @@
 								  VALUES ('".$cid."', '".$scid."', '".$tid."', '".$_SESSION['username']."', '".$comment."', NOW());");
 								  
 	if ($insert) {
-		header("Location: /forum-tutorial/readtopic/".$cid."/".$scid."/".$tid."");
+		header("Location: /readtopic/".$cid."/".$scid."/".$tid."");
 	}
 ?>

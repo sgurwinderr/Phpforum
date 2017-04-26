@@ -4,10 +4,10 @@
 ?>
 <html>
 <head><title>Inki's PHP Forum Tutorial</title></head>
-<link href="/forum-tutorial/styles/main.css" type="text/css" rel="stylesheet" />
+<link href="/styles/main.css" type="text/css" rel="stylesheet" />
 <body>
 	<div class="pane">
-		<div class="header"><h1><a href="/forum-tutorial">PHP and MySQL Forum Tutorial</a></h1></div>
+		<div class="header"><h1><a href="/">PHP and MySQL Forum Tutorial</a></h1></div>
 		<div class="loginpane">
 			<?php
 				session_start();
