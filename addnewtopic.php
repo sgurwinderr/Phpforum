@@ -3,8 +3,8 @@
 	
 	include ('dbconn.php');
 	
-	$topic =$_POST['topic'];
-	$content =$_POST['content']);
+	$topic = addslashes($_POST['topic']);
+	$content = addslashes($_POST['content']);
 	$cid = $_GET['cid'];
 	$scid = $_GET['scid'];
 	
