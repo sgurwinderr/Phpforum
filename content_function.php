@@ -18,7 +18,7 @@
 									  WHERE ($parent_id = categories.cat_id) AND ($parent_id = subcategories.parent_id)");
 		echo "<tr><th width='90%'>Categories</th><th width='10%'>Topics</th></tr>";
 		while ($row = mysqli_fetch_assoc($select)) {
-			echo "<tr><td class='category_title'><a href='/topics/".$row['cat_id']."/".$row['subcat_id']."'>
+			echo "<tr><td class='category_title'><a href='/topics?cid=".$row['cat_id']."&scid=".$row['subcat_id']."'>
 				  ".$row['subcategory_title']."<br />";
 			echo $row['subcategory_desc']."</a></td>";
 			echo "<td class='num-topics'>".getnumtopics($parent_id, $row['subcat_id'])."</td></tr>";
@@ -41,7 +41,7 @@
 			echo "<table class='topic-table'>";
 			echo "<tr><th>Title</th><th>Posted By</th><th>Date Posted</th><th>Views</th><th>Replies</th></tr>";
 			while ($row = mysqli_fetch_assoc($select)) {
-				echo "<tr><td><a href='/readtopic?cid=".$cid."&scid=".$scid."&topic_id=".$row['topic_id']."'>
+				echo "<tr><td><a href='/readtopic?cid=".$cid."&scid=".$scid."&tid=".$row['topic_id']."'>
 					 ".$row['title']."</a></td><td>".$row['author']."</td><td>".$row['date_posted']."</td><td>".$row['views']."</td>
 					 <td>".$row['replies']."</td></tr>";
 			}
